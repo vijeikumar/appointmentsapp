@@ -1,0 +1,22 @@
+/* Write your CSS here */
+.list-item {
+  display: flex;
+  border: 1px solid #b5b7c4;
+}
+.name-cont {
+  display: flex;
+  justify-content: space-between;
+}
+.name {
+  color: #171f46;
+  font-size: 22px;
+  font-family: Roboto;
+}
+.date {
+  color: #b5b7c4;
+  font-family: Roboto;
+  font-size: 18px;
+}
+.img {
+  width: 80px;
+}
