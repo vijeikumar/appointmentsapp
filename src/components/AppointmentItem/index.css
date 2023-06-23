@@ -1,22 +1,36 @@
 /* Write your CSS here */
-.list-item {
+.appointment-item {
   display: flex;
   border: 1px solid #b5b7c4;
+  width: 220px;
+  border-radius: 4px;
+  flex-direction: column;
 }
-.name-cont {
+.head-container {
   display: flex;
   justify-content: space-between;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
 }
 .name {
   color: #171f46;
-  font-size: 22px;
+  font-size: 16px;
   font-family: Roboto;
 }
 .date {
   color: #b5b7c4;
   font-family: Roboto;
-  font-size: 18px;
+  font-size: 12px;
+  padding-top: 0px;
+}
+.button-btn {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding-top: 0px;
+  margin-bottom: 0px;
 }
 .img {
-  width: 80px;
+  width: 10px;
+  height: 12px;
 }

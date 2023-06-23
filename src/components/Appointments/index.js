@@ -30,7 +30,10 @@ class Appointments extends Component {
     this.setState(prevValue => ({
       appointmentList: prevValue.appointmentList.map(each => {
         if (each.id === id) {
-          return {...prevValue.appointmentList, isLike: !each.isLike}
+          return {
+            ...prevValue.appointmentList,
+            isFilteredActive: !each.isFilteredActive,
+          }
         }
         return each
       }),
@@ -45,7 +48,7 @@ class Appointments extends Component {
   }
 
   onAdd = event => {
-    event.preventdefault()
+    event.preventDefault()
 
     const {userName, userDate} = this.state
 
@@ -59,7 +62,7 @@ class Appointments extends Component {
       isFilteredActive: false,
     }
     this.setState(prevValue => ({
-      appointmentList: {...prevValue.appointmentList, newContact},
+      appointmentList: [...prevValue.appointmentList, newContact],
       userName: '',
       userDate: '',
     }))
@@ -68,7 +71,9 @@ class Appointments extends Component {
   getFilterAppointment = () => {
     const {appointmentList, isFilteredActive} = this.state
     if (isFilteredActive) {
-      return appointmentList.filter(eachOne => eachOne.isLike === true)
+      return appointmentList.filter(
+        eachOne => eachOne.isFilteredActive === true,
+      )
     }
     return appointmentList
   }
@@ -135,7 +140,7 @@ class Appointments extends Component {
               className={`filter-style ${filteredClassName}`}
               onClick={this.onClickFilter}
             >
-              starred
+              Starred
             </button>
           </div>
           <ul className="appointments-list">

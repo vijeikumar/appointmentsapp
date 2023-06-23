@@ -1,7 +1,7 @@
 /* Write your CSS here */
 .app-container {
   background-image: linear-gradient(to bottom, #fbc7d4, #9796f0);
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -90,4 +90,9 @@
   background-color: transparent;
   color: #9897f0;
   border: 1px solid #9897f0;
+}
+.appointments-list {
+  display: flex;
+  margin: 12px;
+  padding: 12px;
 }
